@@ -2100,7 +2100,7 @@ catch (\Exception $e) {
 
 Все функции работы с документами принимают параметр action, который принимает два значения:  
  - OtpravkaApi::DOWNLOAD_FILE - выводит соответствующие header для скачивания файла в браузере;  
- - OtpravkaApi::PRINT_FILE - возврат объекта GuzzleHttp\Psr7\UploadedFile с данными о файле.  
+ - OtpravkaApi::PRINT_FILE - возврат объекта GuzzleHttpFork\Psr7\UploadedFile с данными о файле.  
  
  
 **Важно!** Перед печатью любого документа нужно зафиксировать изменения в партии вызовом функции *sendingF103form()*:  
@@ -2138,23 +2138,23 @@ try {
     $otpravkaApi = new OtpravkaApi(Yaml::parse(file_get_contents('path_to_config.yaml')));
     $result = $otpravkaApi->generateDocPackage(28, OtpravkaApi::PRINT_FILE);
     /*
-    GuzzleHttp\Psr7\UploadedFile Object
+    GuzzleHttpFork\Psr7\UploadedFile Object
     (
-        [clientFilename:GuzzleHttp\Psr7\UploadedFile:private] => all-pdf.zip
-        [clientMediaType:GuzzleHttp\Psr7\UploadedFile:private] => application/zip; charset=UTF-8
-        [error:GuzzleHttp\Psr7\UploadedFile:private] => 0
-        [file:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [moved:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [size:GuzzleHttp\Psr7\UploadedFile:private] => 290398
-        [stream:GuzzleHttp\Psr7\UploadedFile:private] => GuzzleHttp\Psr7\Stream Object
+        [clientFilename:GuzzleHttpFork\Psr7\UploadedFile:private] => all-pdf.zip
+        [clientMediaType:GuzzleHttpFork\Psr7\UploadedFile:private] => application/zip; charset=UTF-8
+        [error:GuzzleHttpFork\Psr7\UploadedFile:private] => 0
+        [file:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [moved:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [size:GuzzleHttpFork\Psr7\UploadedFile:private] => 290398
+        [stream:GuzzleHttpFork\Psr7\UploadedFile:private] => GuzzleHttpFork\Psr7\Stream Object
             (
-                [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #56
-                [size:GuzzleHttp\Psr7\Stream:private] => 290398
-                [seekable:GuzzleHttp\Psr7\Stream:private] => 1
-                [readable:GuzzleHttp\Psr7\Stream:private] => 1
-                [writable:GuzzleHttp\Psr7\Stream:private] => 1
-                [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
-                [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                [stream:GuzzleHttpFork\Psr7\Stream:private] => Resource id #56
+                [size:GuzzleHttpFork\Psr7\Stream:private] => 290398
+                [seekable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [readable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [writable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [uri:GuzzleHttpFork\Psr7\Stream:private] => php://temp
+                [customMetadata:GuzzleHttpFork\Psr7\Stream:private] => Array
                     (
                     )
     
@@ -2185,23 +2185,23 @@ try {
     $otpravkaApi = new OtpravkaApi(Yaml::parse(file_get_contents('path_to_config.yaml')));
     $result = $otpravkaApi->generateDocF7p(123645924, OtpravkaApi::PRINT_FILE, new DateTimeImmutable('now'));
     /*
-    GuzzleHttp\Psr7\UploadedFile Object
+    GuzzleHttpFork\Psr7\UploadedFile Object
     (
-        [clientFilename:GuzzleHttp\Psr7\UploadedFile:private] => f7p.pdf
-        [clientMediaType:GuzzleHttp\Psr7\UploadedFile:private] => application/pdf; charset=UTF-8
-        [error:GuzzleHttp\Psr7\UploadedFile:private] => 0
-        [file:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [moved:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [size:GuzzleHttp\Psr7\UploadedFile:private] => 99776
-        [stream:GuzzleHttp\Psr7\UploadedFile:private] => GuzzleHttp\Psr7\Stream Object
+        [clientFilename:GuzzleHttpFork\Psr7\UploadedFile:private] => f7p.pdf
+        [clientMediaType:GuzzleHttpFork\Psr7\UploadedFile:private] => application/pdf; charset=UTF-8
+        [error:GuzzleHttpFork\Psr7\UploadedFile:private] => 0
+        [file:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [moved:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [size:GuzzleHttpFork\Psr7\UploadedFile:private] => 99776
+        [stream:GuzzleHttpFork\Psr7\UploadedFile:private] => GuzzleHttpFork\Psr7\Stream Object
             (
-                [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #56
-                [size:GuzzleHttp\Psr7\Stream:private] => 99776
-                [seekable:GuzzleHttp\Psr7\Stream:private] => 1
-                [readable:GuzzleHttp\Psr7\Stream:private] => 1
-                [writable:GuzzleHttp\Psr7\Stream:private] => 1
-                [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
-                [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                [stream:GuzzleHttpFork\Psr7\Stream:private] => Resource id #56
+                [size:GuzzleHttpFork\Psr7\Stream:private] => 99776
+                [seekable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [readable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [writable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [uri:GuzzleHttpFork\Psr7\Stream:private] => php://temp
+                [customMetadata:GuzzleHttpFork\Psr7\Stream:private] => Array
                     (
                     )
     
@@ -2232,23 +2232,23 @@ try {
     $otpravkaApi = new OtpravkaApi(Yaml::parse(file_get_contents('path_to_config.yaml')));
     $result = $otpravkaApi->generateDocF112ek(123645924, OtpravkaApi::PRINT_FILE);
     /*
-    GuzzleHttp\Psr7\UploadedFile Object
+    GuzzleHttpFork\Psr7\UploadedFile Object
     (
-        [clientFilename:GuzzleHttp\Psr7\UploadedFile:private] => f112.pdf
-        [clientMediaType:GuzzleHttp\Psr7\UploadedFile:private] => application/pdf; charset=UTF-8
-        [error:GuzzleHttp\Psr7\UploadedFile:private] => 0
-        [file:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [moved:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [size:GuzzleHttp\Psr7\UploadedFile:private] => 149702
-        [stream:GuzzleHttp\Psr7\UploadedFile:private] => GuzzleHttp\Psr7\Stream Object
+        [clientFilename:GuzzleHttpFork\Psr7\UploadedFile:private] => f112.pdf
+        [clientMediaType:GuzzleHttpFork\Psr7\UploadedFile:private] => application/pdf; charset=UTF-8
+        [error:GuzzleHttpFork\Psr7\UploadedFile:private] => 0
+        [file:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [moved:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [size:GuzzleHttpFork\Psr7\UploadedFile:private] => 149702
+        [stream:GuzzleHttpFork\Psr7\UploadedFile:private] => GuzzleHttpFork\Psr7\Stream Object
             (
-                [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #56
-                [size:GuzzleHttp\Psr7\Stream:private] => 149702
-                [seekable:GuzzleHttp\Psr7\Stream:private] => 1
-                [readable:GuzzleHttp\Psr7\Stream:private] => 1
-                [writable:GuzzleHttp\Psr7\Stream:private] => 1
-                [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
-                [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                [stream:GuzzleHttpFork\Psr7\Stream:private] => Resource id #56
+                [size:GuzzleHttpFork\Psr7\Stream:private] => 149702
+                [seekable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [readable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [writable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [uri:GuzzleHttpFork\Psr7\Stream:private] => php://temp
+                [customMetadata:GuzzleHttpFork\Psr7\Stream:private] => Array
                     (
                     )
     
@@ -2287,23 +2287,23 @@ try {
     $result = $otpravkaApi->generateDocOrderPrintForm(123645924, OtpravkaApi::PRINT_FILE, true, new DateTimeImmutable('now'));
 
     /*
-    GuzzleHttp\Psr7\UploadedFile Object
+    GuzzleHttpFork\Psr7\UploadedFile Object
     (
-        [clientFilename:GuzzleHttp\Psr7\UploadedFile:private] => form.pdf
-        [clientMediaType:GuzzleHttp\Psr7\UploadedFile:private] => application/pdf; charset=UTF-8
-        [error:GuzzleHttp\Psr7\UploadedFile:private] => 0
-        [file:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [moved:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [size:GuzzleHttp\Psr7\UploadedFile:private] => 251338
-        [stream:GuzzleHttp\Psr7\UploadedFile:private] => GuzzleHttp\Psr7\Stream Object
+        [clientFilename:GuzzleHttpFork\Psr7\UploadedFile:private] => form.pdf
+        [clientMediaType:GuzzleHttpFork\Psr7\UploadedFile:private] => application/pdf; charset=UTF-8
+        [error:GuzzleHttpFork\Psr7\UploadedFile:private] => 0
+        [file:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [moved:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [size:GuzzleHttpFork\Psr7\UploadedFile:private] => 251338
+        [stream:GuzzleHttpFork\Psr7\UploadedFile:private] => GuzzleHttpFork\Psr7\Stream Object
             (
-                [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #70
-                [size:GuzzleHttp\Psr7\Stream:private] => 251338
-                [seekable:GuzzleHttp\Psr7\Stream:private] => 1
-                [readable:GuzzleHttp\Psr7\Stream:private] => 1
-                [writable:GuzzleHttp\Psr7\Stream:private] => 1
-                [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
-                [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                [stream:GuzzleHttpFork\Psr7\Stream:private] => Resource id #70
+                [size:GuzzleHttpFork\Psr7\Stream:private] => 251338
+                [seekable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [readable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [writable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [uri:GuzzleHttpFork\Psr7\Stream:private] => php://temp
+                [customMetadata:GuzzleHttpFork\Psr7\Stream:private] => Array
                     (
                     )
     
@@ -2333,23 +2333,23 @@ try {
     $otpravkaApi = new OtpravkaApi(Yaml::parse(file_get_contents('path_to_config.yaml')));
     $result = $otpravkaApi->generateDocF103(28, OtpravkaApi::PRINT_FILE);
     /*
-    GuzzleHttp\Psr7\UploadedFile Object
+    GuzzleHttpFork\Psr7\UploadedFile Object
     (
-        [clientFilename:GuzzleHttp\Psr7\UploadedFile:private] => f103.pdf
-        [clientMediaType:GuzzleHttp\Psr7\UploadedFile:private] => application/pdf; charset=UTF-8
-        [error:GuzzleHttp\Psr7\UploadedFile:private] => 0
-        [file:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [moved:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [size:GuzzleHttp\Psr7\UploadedFile:private] => 131856
-        [stream:GuzzleHttp\Psr7\UploadedFile:private] => GuzzleHttp\Psr7\Stream Object
+        [clientFilename:GuzzleHttpFork\Psr7\UploadedFile:private] => f103.pdf
+        [clientMediaType:GuzzleHttpFork\Psr7\UploadedFile:private] => application/pdf; charset=UTF-8
+        [error:GuzzleHttpFork\Psr7\UploadedFile:private] => 0
+        [file:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [moved:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [size:GuzzleHttpFork\Psr7\UploadedFile:private] => 131856
+        [stream:GuzzleHttpFork\Psr7\UploadedFile:private] => GuzzleHttpFork\Psr7\Stream Object
             (
-                [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #74
-                [size:GuzzleHttp\Psr7\Stream:private] => 131856
-                [seekable:GuzzleHttp\Psr7\Stream:private] => 1
-                [readable:GuzzleHttp\Psr7\Stream:private] => 1
-                [writable:GuzzleHttp\Psr7\Stream:private] => 1
-                [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
-                [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                [stream:GuzzleHttpFork\Psr7\Stream:private] => Resource id #74
+                [size:GuzzleHttpFork\Psr7\Stream:private] => 131856
+                [seekable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [readable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [writable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [uri:GuzzleHttpFork\Psr7\Stream:private] => php://temp
+                [customMetadata:GuzzleHttpFork\Psr7\Stream:private] => Array
                     (
                     )
     
@@ -2926,23 +2926,23 @@ try {
     $otpravkaApi = new OtpravkaApi(Yaml::parse(file_get_contents('path_to_config.yaml')));
     $result = $otpravkaApi->getPostOfficeFromPassport(\LapayGroup\RussianPost\Enum\OpsObjectType::OPS);
     /*
-    GuzzleHttp\Psr7\UploadedFile Object
+    GuzzleHttpFork\Psr7\UploadedFile Object
     (
-        [clientFilename:GuzzleHttp\Psr7\UploadedFile:private] => OPS02_May_2020.zip.octet-stream
-        [clientMediaType:GuzzleHttp\Psr7\UploadedFile:private] => application/octet-stream; charset=UTF-8
-        [error:GuzzleHttp\Psr7\UploadedFile:private] => 0
-        [file:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [moved:GuzzleHttp\Psr7\UploadedFile:private] =>
-        [size:GuzzleHttp\Psr7\UploadedFile:private] => 4203382
-        [stream:GuzzleHttp\Psr7\UploadedFile:private] => GuzzleHttp\Psr7\Stream Object
+        [clientFilename:GuzzleHttpFork\Psr7\UploadedFile:private] => OPS02_May_2020.zip.octet-stream
+        [clientMediaType:GuzzleHttpFork\Psr7\UploadedFile:private] => application/octet-stream; charset=UTF-8
+        [error:GuzzleHttpFork\Psr7\UploadedFile:private] => 0
+        [file:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [moved:GuzzleHttpFork\Psr7\UploadedFile:private] =>
+        [size:GuzzleHttpFork\Psr7\UploadedFile:private] => 4203382
+        [stream:GuzzleHttpFork\Psr7\UploadedFile:private] => GuzzleHttpFork\Psr7\Stream Object
             (
-                [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #56
-                [size:GuzzleHttp\Psr7\Stream:private] => 4203382
-                [seekable:GuzzleHttp\Psr7\Stream:private] => 1
-                [readable:GuzzleHttp\Psr7\Stream:private] => 1
-                [writable:GuzzleHttp\Psr7\Stream:private] => 1
-                [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
-                [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                [stream:GuzzleHttpFork\Psr7\Stream:private] => Resource id #56
+                [size:GuzzleHttpFork\Psr7\Stream:private] => 4203382
+                [seekable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [readable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [writable:GuzzleHttpFork\Psr7\Stream:private] => 1
+                [uri:GuzzleHttpFork\Psr7\Stream:private] => php://temp
+                [customMetadata:GuzzleHttpFork\Psr7\Stream:private] => Array
                     (
                     )
     

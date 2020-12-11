@@ -42,13 +42,13 @@ class OtpravkaApi implements LoggerAwareInterface
     /** @var int  */
     private $timeout = 60;
 
-    /** @var \GuzzleHttp\Client  */
+    /** @var \GuzzleHttpFork\Client  */
     private $otpravkaClient = null;
 
-    /** @var \GuzzleHttp\Client  */
+    /** @var \GuzzleHttpFork\Client  */
     private $deliveryClient = null;
 
-    /** @var \GuzzleHttp\Client */
+    /** @var \GuzzleHttpFork\Client */
     private $postOfficeClient = null;
 
     function __construct($config, $timeout = 60)
@@ -66,7 +66,7 @@ class OtpravkaApi implements LoggerAwareInterface
         switch ($endpoint) {
             case self::OTPRAVKA:
                 if (!$this->otpravkaClient) {
-                    $this->otpravkaClient = new \GuzzleHttp\Client([
+                    $this->otpravkaClient = new \GuzzleHttpFork\Client([
                         'base_uri' => 'https://otpravka-api.pochta.ru/',
                         'headers' => ['Authorization' => 'AccessToken ' . $this->token,
                             'X-User-Authorization' => 'Basic ' . $this->key,
@@ -81,7 +81,7 @@ class OtpravkaApi implements LoggerAwareInterface
 
             case self::DELIVERY:
                 if (!$this->deliveryClient) {
-                    $this->deliveryClient = new \GuzzleHttp\Client([
+                    $this->deliveryClient = new \GuzzleHttpFork\Client([
                         'base_uri' => 'https://delivery.pochta.ru/delivery/',
                         'timeout' => $this->timeout,
                         'http_errors' => false
@@ -91,7 +91,7 @@ class OtpravkaApi implements LoggerAwareInterface
 
             case self::POSTOFFICE:
                 if (!$this->postOfficeClient) {
-                    $this->postOfficeClient = new \GuzzleHttp\Client([
+                    $this->postOfficeClient = new \GuzzleHttpFork\Client([
                         'base_uri' => 'https://otpravka-api.pochta.ru/postoffice/',
                         'headers' => ['Authorization' => 'AccessToken ' . $this->token,
                             'X-User-Authorization' => 'Basic ' . $this->key,

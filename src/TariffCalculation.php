@@ -21,7 +21,7 @@ class TariffCalculation implements LoggerAwareInterface
      * @return CalculateInfo результат расчета тарифа
      * @throws RussianPostException
      * @throws RussianPostTarrificatorException
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \GuzzleHttpFork\Exception\GuzzleException
      */
     public function calculate($object_id, $params, $services = [], $date=false)
     {

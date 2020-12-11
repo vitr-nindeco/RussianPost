@@ -15,11 +15,17 @@
   ],
   "require": {
     "php": ">=5.5",
-    "guzzlehttp/guzzle": "6.3 - 7.1",
     "psr/log": "^1.0",
+    "guzzlehttp-fork/guzzle": "6.5.5.1",
     "ext-soap": "*",
     "ext-json": "*"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:vitr-nindeco/guzzle-fork.git"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "LapayGroup\\RussianPost\\": "src/"

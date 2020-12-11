@@ -14,7 +14,7 @@ class Calculation implements LoggerAwareInterface
 
     function __construct($timeout = 60)
     {
-        $this->httpClient = new \GuzzleHttp\Client([
+        $this->httpClient = new \GuzzleHttpFork\Client([
             'base_uri'=>'https://tariff.pochta.ru/tariff/'.self::VERSION.'/',
             'timeout' => $timeout,
             'http_errors' => false
@@ -77,7 +77,7 @@ class Calculation implements LoggerAwareInterface
      *
      * @return mixed
      * @throws RussianPostException
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \GuzzleHttpFork\Exception\GuzzleException
      */
     public function getCategoryList()
     {
@@ -95,7 +95,7 @@ class Calculation implements LoggerAwareInterface
      * @param $category_id
      * @return mixed
      * @throws RussianPostException
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \GuzzleHttpFork\Exception\GuzzleException
      */
     public function getCategoryDescription($category_id)
     {
@@ -115,7 +115,7 @@ class Calculation implements LoggerAwareInterface
      * @param $services
      * @return mixed
      * @throws RussianPostException
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \GuzzleHttpFork\Exception\GuzzleException
      */
     public function getTariff($object_id, $params, $services)
     {
@@ -133,7 +133,7 @@ class Calculation implements LoggerAwareInterface
      * @param $object_id
      * @return mixed
      * @throws RussianPostException
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \GuzzleHttpFork\Exception\GuzzleException
      */
     public function getObjectInfo($object_id)
     {
